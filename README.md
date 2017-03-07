@@ -1,58 +1,101 @@
-?摨之摮? 憭扳????瘜? 雿平鈭?
+長庚大學 大數據分析方法 作業二
 ================
 
-雿平隤芣?? 嚗像鈭斗????????嚗?
---------------------------------------------
-
-靘???內嚗撠?? Code Chunk摰??????Ⅳ?撖?
-
--   ??潸?????憓??num1??um2嚗蒂撠??澆?閮剖?3561???5815嚗??????????um1????um2?敺???????暺???**??鈭**?撠暺洵鈭??
-    -   num1 ??? num2
-    -   num1 皜? num2
-    -   num1 銋? num2
-    -   num1 ? num2
--   瑼Ｘ蝮質汗R?撱箄???ris (str??)
--   頛詨蝟餌絞???????**Knit**?????
--   摮葡瘥之撠? (頛詨TRUE or FALSE)
-    -   瑼Ｘ?R銝剖?葡憭批神A??瘥?神a**憭?**
-    -   瑼Ｘ?R銝剖?葡撠神b??瘥之撖隹**憭?**
--   ??????平蝟餌絞???鞈??誑??歇霈????辣皜
-
-摰???Ⅳ?撖怠???**Knit**嚗? Markdown頧Markdown瑼??炎?蝔?銵?撓?蝯??甇?蝣綽?迤蝣箏???平瑼?GitHub Desktop **Commit** & **Sync**?GitHub銝?
-
-蝜喃漱?????2017/03/20 (銝)
-
-??潸?????
---------------
+數值變數運算
+------------
 
 ``` r
-#?R Code Chunk
+num1<-3561
+num2<-5815
+num1+num2
 ```
 
-瑼Ｘ蝮質汗鞈??
+    ## [1] 9376
+
+``` r
+num1-num2
+```
+
+    ## [1] -2254
+
+``` r
+num1*num2
+```
+
+    ## [1] 20707215
+
+``` r
+round(num1/num2,digits = 2)
+```
+
+    ## [1] 0.61
+
+檢查總覽資料
+------------
+
+``` r
+str(iris)
+```
+
+    ## 'data.frame':    150 obs. of  5 variables:
+    ##  $ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...
+    ##  $ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...
+    ##  $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...
+    ##  $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...
+    ##  $ Species     : Factor w/ 3 levels "setosa","versicolor",..: 1 1 1 1 1 1 1 1 1 1 ...
+
+輸出系統現在日期
 ----------------
 
 ``` r
-#?R Code Chunk
+dateBook<-Sys.Date()
+dateBook
 ```
 
-頛詨蝟餌絞??????
---------------------
+    ## [1] "2017-03-07"
+
+字串比大小
+----------
 
 ``` r
-#?R Code Chunk
+char1<-"A" 
+char2<-"a"
+char1>char2
 ```
 
-摮葡瘥之撠?
--------------
+    ## [1] TRUE
 
 ``` r
-#?R Code Chunk
+char1<-"b" 
+char2<-"A"
+char1>char2
 ```
 
-???憓?????
------------------
+    ## [1] TRUE
+
+運作環境資訊擷取
+----------------
 
 ``` r
-#?R Code Chunk
+sessionInfo()
 ```
+
+    ## R version 3.3.2 (2016-10-31)
+    ## Platform: x86_64-w64-mingw32/x64 (64-bit)
+    ## Running under: Windows 8.1 x64 (build 9600)
+    ## 
+    ## locale:
+    ## [1] LC_COLLATE=Chinese (Traditional)_Taiwan.950 
+    ## [2] LC_CTYPE=Chinese (Traditional)_Taiwan.950   
+    ## [3] LC_MONETARY=Chinese (Traditional)_Taiwan.950
+    ## [4] LC_NUMERIC=C                                
+    ## [5] LC_TIME=Chinese (Traditional)_Taiwan.950    
+    ## 
+    ## attached base packages:
+    ## [1] stats     graphics  grDevices utils     datasets  methods   base     
+    ## 
+    ## loaded via a namespace (and not attached):
+    ##  [1] backports_1.0.5 magrittr_1.5    rprojroot_1.2   tools_3.3.2    
+    ##  [5] htmltools_0.3.5 yaml_2.1.14     Rcpp_0.12.9     stringi_1.1.2  
+    ##  [9] rmarkdown_1.3   knitr_1.15.1    stringr_1.2.0   digest_0.6.12  
+    ## [13] evaluate_0.10
